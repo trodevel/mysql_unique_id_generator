@@ -1,4 +1,2 @@
-USE xhunt2;
-
 CREATE TABLE IF NOT EXISTS sequence_gen (id INT NOT NULL);
-INSERT INTO sequence VALUES (0);
+INSERT INTO sequence_gen VALUES (0);
