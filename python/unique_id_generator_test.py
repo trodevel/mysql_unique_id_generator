@@ -35,15 +35,15 @@ def my_gen():
 
 def test_00():
 
-    dbe = my_gen()
+    uig = my_gen()
 
 ##########################################################
 
 def test_01():
 
-    dbe = my_gen()
+    uig = my_gen()
 
-    res = dbe.execute_query_from_file( "drop_table_users.sql" )
+    res = uig.execute_query_from_file( "drop_table_users.sql" )
 
     dump_res( "test_01", res )
 
@@ -51,9 +51,9 @@ def test_01():
 
 def test_02():
 
-    dbe = my_gen()
+    uig = my_gen()
 
-    res = dbe.execute_query_from_file( "create_table_users.sql" )
+    res = uig.execute_query_from_file( "create_table_users.sql" )
 
     dump_res( "test_02", res )
 
@@ -61,9 +61,9 @@ def test_02():
 
 def test_03():
 
-    dbe = my_gen()
+    uig = my_gen()
 
-    res = dbe.execute_query_from_file( "tmpl_add_user.sql", { "ID": 1, "FIRSTNAME": "Test", "LASTNAME": "User", "QUERY_DEBUG": 0 } )
+    res = uig.execute_query_from_file( "tmpl_add_user.sql", { "ID": 1, "FIRSTNAME": "Test", "LASTNAME": "User", "QUERY_DEBUG": 0 } )
 
     dump_res( "test_03", res )
 
