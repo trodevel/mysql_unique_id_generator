@@ -23,7 +23,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 from python_mysql_executor.db import DB
 from aux_logger.aux_logger import create_timed_rotating_logger
 
-python_mysql_executor.db.logger = create_timed_rotating_logger( "logs/db", "db" )
+##########################################################
+
+def set_logger( l ):
+    python_mysql_executor.db.set_logger( l )
 
 ##########################################################
 
