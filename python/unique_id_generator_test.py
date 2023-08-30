@@ -43,9 +43,7 @@ def test_01():
 
     uig = my_gen()
 
-    res = uig.execute_query_from_file( "drop_table_users.sql" )
-
-    dump_res( "test_01", res )
+    uig.init_table()
 
 ##########################################################
 
@@ -53,9 +51,9 @@ def test_02():
 
     uig = my_gen()
 
-    res = uig.execute_query_from_file( "create_table_users.sql" )
+    id = uig.generate_id()
 
-    dump_res( "test_02", res )
+    print( f"test_02: id = {id}" )
 
 ##########################################################
 
@@ -63,9 +61,10 @@ def test_03():
 
     uig = my_gen()
 
-    res = uig.execute_query_from_file( "tmpl_add_user.sql", { "ID": 1, "FIRSTNAME": "Test", "LASTNAME": "User", "QUERY_DEBUG": 0 } )
+    for s in range( 1, 10 ):
+        id = uig.generate_id()
 
-    dump_res( "test_03", res )
+        print( f"test_03: id = {id}" )
 
 ##########################################################
 
