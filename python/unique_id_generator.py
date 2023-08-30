@@ -40,7 +40,7 @@ class UniqueIdGenerator:
         self.db.execute_query_from_file( "create_table_sequence_gen.sql" )
 
     def generate_id( self ) -> int:
-        all_res = self.db.execute_query_from_file( "create_table_users.sql" )
+        all_res = self.db.execute_query_from_file( "generate_uniq_id.sql" )
 
         if len( all_res ) == 0:
             return 0
