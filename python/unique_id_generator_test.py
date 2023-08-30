@@ -24,7 +24,7 @@ import unique_id_generator
 import db_config
 from aux_logger.aux_logger import create_timed_rotating_logger
 
-db.logger.set_logger( create_timed_rotating_logger( "logs/id_gen", "id_gen" ) )
+unique_id_generator.set_logger( create_timed_rotating_logger( "logs/id_gen", "id_gen" ) )
 
 ##########################################################
 
