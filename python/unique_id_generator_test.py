@@ -43,7 +43,7 @@ def test_01():
 
     uig = my_gen()
 
-    uig.init_table()
+    uig.create_table()
 
 ##########################################################
 
