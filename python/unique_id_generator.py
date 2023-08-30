@@ -20,6 +20,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 '''
 
+import python_mysql_executor.db
 from python_mysql_executor.db import DB
 from aux_logger.aux_logger import create_timed_rotating_logger
 
