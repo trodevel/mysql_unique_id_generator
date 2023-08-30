@@ -45,6 +45,6 @@ class UniqueIdGenerator:
         if len( all_res ) == 0:
             return 0
 
-        res = all_res[0][0]
+        res = int( all_res[0][0][0] )
 
         return res

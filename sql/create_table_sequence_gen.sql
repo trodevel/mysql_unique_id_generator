@@ -1,2 +1,1 @@
 CREATE TABLE IF NOT EXISTS sequence_gen (id INT NOT NULL);
-INSERT INTO sequence_gen VALUES (0);
