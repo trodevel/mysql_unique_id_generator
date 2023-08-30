@@ -38,9 +38,10 @@ class UniqueIdGenerator:
 
     def create_table( self ) -> None:
         self.db.execute_query_from_file( "create_table_sequence_gen.sql" )
-
-    def init_table( self ) -> None:
         self.db.execute_query_from_file( "init_sequence_gen.sql" )
+
+    def reset( self ) -> None:
+        self.db.execute_query_from_file( "reset_sequence_gen.sql" )
 
     def generate_id( self ) -> int:
         all_res = self.db.execute_query_from_file( "generate_uniq_id.sql" )
