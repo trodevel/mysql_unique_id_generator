@@ -1,1 +1,3 @@
-INSERT INTO sequence_gen VALUES (0);
+INSERT INTO sequence_gen (id)
+SELECT 0
+WHERE NOT EXISTS (SELECT * FROM sequence_gen);
